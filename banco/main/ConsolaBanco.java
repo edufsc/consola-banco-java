@@ -39,7 +39,11 @@ public class ConsolaBanco {
 			mostrarMenu();
 
 			System.out.print("Selecciona una opción: ");
-			opcion = teclado.nextInt();
+			try {
+				opcion = teclado.nextInt();
+			} catch (Exception e) {
+				opcion = 0;
+			}
 
 			switch (opcion) {
 			case 1:
